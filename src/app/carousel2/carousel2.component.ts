@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -10,13 +10,13 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 export class Carousel2Component {
   constructor(config: NgbCarouselConfig) {
     // customize default values of carousels used by this component tree
-    config.interval = 2000;
+    config.interval = 5000;
     config.wrap = true;
     config.keyboard = true;
     config.pauseOnHover = false;
   }
 
-  images : Array<String> = []
+  @Input() images : Array<String> = []
 
   ngOnInit() {
   }

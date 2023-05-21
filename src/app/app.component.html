@@ -87,6 +87,18 @@
   </div>
 </ng-template>
 
-<app-carousel2>
+<div style="text-align:center">
+	<p>
+		<input type="file" (change)="selectFile($event)">
+    <button type="button" class="btn btn-outline-dark" (click)="addImage()">Upload</button>
+	</p>
+  <div [innerHtml]='msg' *ngIf="msg" style="color: red;"></div>
+	<div><img class="image-small" [src]="url" *ngIf="url"></div>
+</div>
+<br>
 
+
+<app-carousel2 [images]="images">
 </app-carousel2>
+<br>
+<button type="button" class="btn btn-outline-danger" (click)="remImage()">Delete carousel</button>
