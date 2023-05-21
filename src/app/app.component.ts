@@ -53,7 +53,10 @@ export class AppComponent {
   remImage(){
     if(confirm("Delete carousel?"))
     {
-      this.images.pop()
+      while(this.images.length>0)
+      {
+        this.images.pop()
+      }
     }
   }
 }
